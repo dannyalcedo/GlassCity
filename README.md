@@ -8,21 +8,25 @@ While Hide and Seek is an iconic and very fun game for kids, as an adult it’s 
     1. Download the latest version of Unity
         * A free plan is available for individual use.
         * Please ensure the Unity Hub is also downloaded. 
-    2. Once Unity Hub and Unity are downloaded, open Unity Hub and add the GlassCity Unity project directory from the github repo to Unity Hub.
-    3. If all is done correctly, you will now be able to open the project from Unity Hub
+    2. Once both applications are downloaded (do not open them yet) make your way to the GlassCity Repo and unzip one of the following two files.
+        * Unzip GlassCity.zip inside the /Unity-Windows directory if you are on a Windows 
+        * Unzip GlassCity.zip inside the /Unity-Mac directory if you are on a Mac 
+    4. Then, open your recently downloaded Unity Hub and 'Add' the resulting unzipped GlassCity project to Unity Hub.
+    5. If all is done correctly, you will now be able to open the project from Unity Hub
 3. Launch Database
     1. Download the latest version of XAMPP: an open-source cross-platform web server solution stack package
         * If on a Mac, make sure you do NOT download the XAMPP files that are greater than 164Mb
     2. Once XAMPP is downloaded, launch the application, and start the MySQL Database Server, the ProFTPD Server, and Apache Web Server within the XAMPP application.
     3. Once the servers are running, select “Open Application Folder” to be taken to the server directory. 
-    4. Within the parent directory, /xamppfiles, click into the /xamppfiles/htdocs directory and copy the “GlassCity” folder from the git repository into it.
+    4. Within the parent directory of the server directory, /xamppfiles, click into the /xamppfiles/htdocs directory and copy the /GlassCity directory found in this repository's /xampp directory.
         * The GlassCity folder houses the php files to interface the MySQL database with Unity.
 4. Updating the Database
     1. Once your XAMPP servers are running and the php files are within the htdocs directory, open your favorite web browser and go to http://localhost/dashboard/
     2. From the dashboard, select the phpMyAdmin tab on the top right. This is where the database will live. 
     3. Once inside the phpMyAdmin page, select the “Import” tab on the top of the page
-    4. In the Import tab, select “Choose File” and select the glasscity.sql file from the GitHub
-    5. If this is successful, you should see a “glasscity” database on the left menu.
+    4. In the Import tab, select “Choose File” and select the glasscity.sql file from the cloned repository
+    5. If this is successful, you should see a “glasscity” database on the left menu and two tables associated with that database.
 5. Playing the game
     1. You are now ready to play the game. 
-    2. Navigate to the Scenes directory in the Unity Inspector and double click the “LogIn” scene. Then, click play on the top of the screen. 
+    2. If you haven't done so already, launch GlassCity from the Unity Hub
+    3. Navigate to the Scenes directory in the Unity Inspector and double click the “LogIn” scene. Then, click play on the top of the screen. 
