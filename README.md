@@ -1,16 +1,28 @@
 # GlassCity
 While Hide and Seek is an iconic and very fun game for kids, as an adult it’s not as easy to sneak around trees or crouch behind boulders. However, if you scale the game up to a sprawling city like New York you’ll have plenty of area to cover and clever spaces to hide. But then you run into another problem: trying to find a hider within a city is almost near impossible and hiding for such a long time can get pretty boring. If we create an experience focused on the seeking aspect of Hide and Seek, allow users to choose their preferred playing area, and provide clues to triangulate a hider, then the game will become a bit more balanced and help rekindle the fascination that we had with the game as kids. Furthermore, this can also serve as a great way for tourists and new residents to get better acquainted with the city, and for long-time residents to prove how much of a New Yorker they really are.  
 
-# The Solution
-GlassCity is a large-scale hide-and-seek mobile game for the city of New York. The game has two main objectives:
-1. To help tourists and new residents of New York get familiar with the city in a competitive way. 
-2. Provide long-time New Yorkers an opportunity to show off their knowledge of the city.
-
-Competitiveness within GlassCity will be displayed through a game-wide leaderboard, where players are ranked based on their success in the game. This will encourage players to remain active in the game and also foster a competitive spirit.  
-
-Within the game, a user acts as a seeker who is seeking a virtual hider. The games are timed and the length of the game will be proportional to the game radius. The game radius is the preferred playing area set by the player – it can be a couple of blocks, a neighborhood, or a borough. Another gaming option that the player has to choose before the game starts is the game difficulty. Game difficulty has two levels; the “Tourist” level which is an easier mode, and the “Resident” level which is an advanced mode.
-
-When the game begins, the system generates a hidden coordinate within the user’s selected radius that will act as the virtual hider. To aid the seeker in their quest to find the virtual hider, they will have the ability to receive clues that hint at the hider’s location. These clues come in the form of trivia, and the frequency at which the seeker will have the option to unlock clues will depend on the distance between them and the hider; for example, the closer the seeker gets to the hider, the less clues they can access. To unlock the trivia clue, the seeker must complete one of a set of minigames, and the minigames themselves also provide triangulation clues. In the “Tourist” difficulty level, if the user wins the minigame, they get the clue(s) and the map area shrinks to aid in pinning down the hider - this does not happen in the “Resident” difficulty level. On the other hand, if the seeker loses the minigame they don’t receive the trivia clue and also lose game time. Finally, the seeker wins the game once they are within ten feet of the virtual hider. If time runs out or if the player chooses to give up before finding the hider, they lose. 
-
-# The System
-The system to be produced is an interactive location-based augmented reality game where users can play individually against virtual players. The customer of this system wants to tackle the problem of a lack of interactive games centered around a physical area with a community-driven focus. To meet these needs, this system creates a virtual environment reflective of a geographical location, where users (players) can play a game of hide and seek against virtual adversaries within the real-life geographical space, like Washington Square Park in New York City for example. Ultimately, the top-level goal of this system is for users to interact with the spaces they exist in and become more familiar with said space in a gamified, community-driven way. A benefit of this system is that it will give users an opportunity to learn more about their geographical location while competing to be the best amongst their community. Lastly, while the interactive game is a standalone system, it pulls from other existing systems like a web mapping service, a user’s smartphone data, app stores, and ad providers.    
+# Launching GlassCity
+1. GitHub
+    1. Clone the GlassCity repo into your local drive
+2. Unity
+    1. Download the latest version of Unity
+        * A free plan is available for individual use.
+        * Please ensure the Unity Hub is also downloaded. 
+    2. Once Unity Hub and Unity are downloaded, open Unity Hub and add the GlassCity Unity project directory from the github repo to Unity Hub.
+    3. If all is done correctly, you will now be able to open the project from Unity Hub
+3. Launch Database
+    1. Download the latest version of XAMPP: an open-source cross-platform web server solution stack package
+        * If on a Mac, make sure you do NOT download the XAMPP files that are greater than 164Mb
+    2. Once XAMPP is downloaded, launch the application, and start the MySQL Database Server, the ProFTPD Server, and Apache Web Server within the XAMPP application.
+    3. Once the servers are running, select “Open Application Folder” to be taken to the server directory. 
+    4. Within the parent directory, /xamppfiles, click into the /xamppfiles/htdocs directory and copy the “GlassCity” folder from the git repository into it.
+        * The GlassCity folder houses the php files to interface the MySQL database with Unity.
+4. Updating the Database
+    1. Once your XAMPP servers are running and the php files are within the htdocs directory, open your favorite web browser and go to http://localhost/dashboard/
+    2. From the dashboard, select the phpMyAdmin tab on the top right. This is where the database will live. 
+    3. Once inside the phpMyAdmin page, select the “Import” tab on the top of the page
+    4. In the Import tab, select “Choose File” and select the glasscity.sql file from the GitHub
+    5. If this is successful, you should see a “glasscity” database on the left menu.
+5. Playing the game
+    1. You are now ready to play the game. 
+    2. Navigate to the Scenes directory in the Unity Inspector and double click the “LogIn” scene. Then, click play on the top of the screen. 
